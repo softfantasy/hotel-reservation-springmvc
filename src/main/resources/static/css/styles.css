@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+}
+
+.flex-row-flow {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.flex-center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-row {
+    display: flex;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.margin-top-5 {
+    margin-top: 5px !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.margin-top-20 {
+    margin-top: 20px !important;
+}
+
+.margin-top-30 {
+    margin-top: 30px !important;
+}
+
+.margin-top-30 {
+    margin-top: 30px !important;
+}
+
+.margin-right-10 {
+    margin-right: 10px !important;
+}
+
+.margin-left-10 {
+    margin-left: 10px !important;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px !important;
+}
+
+.dim {
+    opacity: 0.4 !important;
+}
+
+.subtotal {
+    opacity: 0.6 !important;
+    font-size: 1.2em;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.icon-large {
+    font-size: 1.7em !important;
+}
+
+.icon-massive {
+    font-size: 2.2em !important;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservation-summary-table tr td:first-child {
+    padding-right: 20px !important;
+}
+
+#quickSummary table td {
+    padding: 2px 0 2px 0;
+}
+
+#quickSummaryDates p {
+    margin: 2px 0 2px 0 !important;
+}
+
+.underline-table-row {
+    border-bottom: 1px solid rgba(34,36,38,.15) !important;
+}
+
+.main__content-group {
+    margin-bottom: 30px !important;
+}
+
+.main__content-group:last-child {
+    margin-bottom: 0 !important;
+}
+
+#searchContainer {
+    background: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 80%;
+}
+
+.meta-table .row {
+    padding: 2px 0 2px 0 !important;
+}
+
+.meta-table__header {
+    font-weight: bold;
+}

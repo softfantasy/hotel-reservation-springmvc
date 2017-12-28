@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{core-layout}">
+<body>
+
+<div layout:fragment="content" class="ui attached segment">
+
+    <h2 th:text="|Add drinks for: ${person.name}|"></h2>
+
+    <form class="ui form" th:action="@{/drinks}" method="post" th:object="${person}">
+        <input type="hidden" th:field="*{id}">
+        <input type="hidden" th:field="*{name}">
+
+        <ul>
+            <li th:each="drink : ${selectableEnumDrinks}">
+                <div class="ui checkbox">
+                    <input type="checkbox" th:field="*{enumDrinks}" th:value="${drink}">
+                    <label th:text="${drink}"></label>
+                </div>
+            </li>
+        </ul>
+
+        <div class="field">
+            <button class="ui button" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

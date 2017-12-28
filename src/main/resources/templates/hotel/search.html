@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{core-layout}">
+<body>
+<div layout:fragment="content">
+    <h3>Search for hotel rooms by location</h3>
+
+    <div class="ui form">
+
+        <div class="field">
+            <div class="ui search" id="searchInputWrapper">
+                <div class="ui icon input">
+                    <input class="prompt" type="text" id="searchInput" placeholder="City, postcode or state...">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="field flex-center-row">
+            <button class="ui button" type="button" id="searchGoButton">Go</button>
+        </div>
+    </div>
+    <th:block layout:fragment="script">
+        <script>
+            $(document).ready(function () {
+                $("#searchGoButton").click(function() {
+                 window.location = '/hotel/search?postcode=3000'
+                });
+            });
+
+            function locationQueryString(searchLocation) {
+                for (var key in searchLocation) {
+                    if (searchLocation.hasOwnProperty(key) && searchLocation[key] === '') {
+                        delete searchLocation[key]
+                    }
+                }
+                return $.param(searchLocation);
+            }
+
+            function pagingAndSortingQueryString() {
+                return "page=0&sort=stars,desc&sort=name"
+            }
+
+
+        </script>
+    </th:block>
+
+</body>
+</html>

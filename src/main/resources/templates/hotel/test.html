@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{core-layout}"
+      xmlns:qs="http://www.w3.org/1999/xhtml">
+<body>
+<div layout:fragment="content">
+
+    <h1 th:text="${#request.getQueryString()}"></h1>
+
+    <h2 th:with="newQueryString=${#qs.fieldSorterAsc(#request.getQueryString()).apply('location')}"
+        th:text="${newQueryString}">
+    </h2>
+
+</div>
+<th:block layout:fragment="script">
+
+</th:block>
+
+</body>
+</html>
